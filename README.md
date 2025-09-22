@@ -63,7 +63,7 @@ In the file, change:
 | Plain HTML / any framework | `<head>`, **before** CMP loads (no `defer`) |
 | Next.js | Add in `_document.tsx` inside `<Head>` as a `<script src>` (no `defer`) |
 | Vite / React | Add to `index.html` in `<head>` (no `defer`) |
-| Cloudflare Zaraz | Prefer hosting this in **your app** rather than as a Zaraz tool (to avoid quota). If you must use Zaraz, run it **as early as possible** and ensure it executes before the CMP tool. |
+| Cloudflare Zaraz | Prefer hosting this in **your app** rather than as a Zaraz tool (to avoid quota). If you must use Zaraz, run it **as early as possible** and ensure it executes before the CMP tool. The reality is that I'm not even sure it's possible to effectively make it work as custom HTML delivered by Zaraz because of the requirement that the script run very early on page |
 
 The hook must run **before** the CMP creates its shadow root. If you load this too late, the CMP may already have attached and you’ll miss it (the shim still scans for existing *open* roots as a fallback).
 
