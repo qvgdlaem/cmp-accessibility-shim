@@ -1,6 +1,6 @@
 # CMP A11Y Shim (Shadow-DOM friendly)
 
-Shadow-DOM friendly accessibility shim for CMP modals (built for Cloudflare Zaraz, adaptable to any injected CMP that is hosted first-party)
+Shadow-DOM friendly accessibility shim for CMP modals (built for Cloudflare Zaraz using the IAB TCF compliant modal, adaptable to any injected CMP that is hosted first-party)
 
 A tiny, vendor-agnostic JavaScript shim that improves **accessibility** of cookie/consent modals (CMPs) injected into Shadow DOM (even `mode:"closed"`). No edits to vendor code. Adds programmatic names/descriptions to checkboxes, better focus behavior, and a **brand-color “canary”** so you can visually confirm the shim attached.
 
@@ -113,7 +113,7 @@ Everything else (the shadow-root plumbing, attachShadow hook, skipping logic) sh
 
 ## **“Bring your markup \+ ask your AI” (prompt template)**
 
-**Copy this into your AI assistant when adapting for your CMP:**
+**Copy this into your AI assistant (Claude Code, Codex, Cursor etc) when adapting for your CMP:**
 
 `I’m using the open-source “CMP A11Y Shim (Shadow-DOM friendly)” script.`   
 `Here is my CMP’s rendered modal markup (from DevTools, full tree, including shadow host and its subtree):`
